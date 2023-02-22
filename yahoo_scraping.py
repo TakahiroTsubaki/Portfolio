@@ -5,10 +5,8 @@ from selenium.webdriver.chrome.options import Options
 import time
 import csv
 
-#ChromeDriverのフルパス
+#chromedriver.exeのフルパス
 CHROMEDRIVER = "chromedriver.exe"
-#最大ページ数
-MAX_PAGE = 2
 
 #ドライバーの取得
 def get_driver():
@@ -100,7 +98,7 @@ def next_btn_click(driver):
     time.sleep(3)
 
 
-
+#ヤフーオークションのトップページ
 url = "https://auctions.yahoo.co.jp/"
 
 #検索ワードの指定
@@ -108,6 +106,9 @@ word = ""
 
 #最低入札数の指定
 bid_num = 1
+
+#最大ページ数
+max_page = 2
 
 HEADER = ["タイトル", "現在の金額", "残り時間", "入札数", "URL" ]
 
@@ -152,7 +153,7 @@ while flag:
             continue
 
     #指定のページ数になったら終了させる
-    if page_count == MAX_PAGE:
+    if page_count == max_page:
         break
     #次のページへ進む
     next_btn_click(driver)
