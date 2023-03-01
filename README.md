@@ -15,12 +15,14 @@
 
 -selenium 3.141.0
 
+-requests 2.28.1
+
 ## 使い方
 Pythonの環境構築は完了しているものとし、以下のご準備をお願いします。
 
 ご自身のChromeのバージョンに合ったChromeDriverのダウンロード
 
-BeautifulSoup4,seleniumのインストール
+BeautifulSoup4, selenium, requestsのインストール
 
 line 9　と　line 105 ~ 111の指定項目を設定
 
